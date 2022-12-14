@@ -176,16 +176,16 @@ seçilir.)
 
 
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-        desiredCapabilities.setCapability("momentumGw", "4033");
-        desiredCapabilities.setCapability("momentumUser", "okan@asseco-see.com");
-        desiredCapabilities.setCapability("momentumToken", "u6tYhEe4RAR37WM3pMKIMaDaCQkKlAjQ6pT0JYQCQIU=");//desiredCapabilities.setCapability("deviceName", "Pixel 3 XL API 30");
+        desiredCapabilities.setCapability("momentumGw", momentum_Gw);
+        desiredCapabilities.setCapability("momentumUser", momentum_user);
+        desiredCapabilities.setCapability("momentumToken", momentum_Token);//desiredCapabilities.setCapability("deviceName", "Pixel 3 XL API 30");
         //desiredCapabilities.setCapability("automationName", "UIAutomator2"); //DeviceId from "adb devices" command
         desiredCapabilities.setCapability("udid", "");
         desiredCapabilities.setCapability("deviceName", "");
         desiredCapabilities.setCapability("automationName", "UiAutomator2");
         desiredCapabilities.setCapability("app", "https://www.testrelic.com/Bilgikolik.apk");//desiredCapabilities.setCapability("appActivity", "com.pozitron.hepsiburada");
         desiredCapabilities.setCapability("noReset", "false");
-        driver = new AndroidDriver<>(new URL("http://momentumv2.mobven.com:8088/wd/hub"), desiredCapabilities);
+        driver = new AndroidDriver<>(new URL(momentum_url), desiredCapabilities);
         wait = new WebDriverWait(driver, 10);
 
     }
